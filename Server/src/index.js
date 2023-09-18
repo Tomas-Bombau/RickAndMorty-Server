@@ -15,6 +15,8 @@ http.createServer(function (req, res) {
     // } else{
     //     res.writeHead(404)
     //     return res.end()
+
+    // WORKS TOO
     // }
 
     res.writeHead(200, { 'Content-Type': 'application/json' })
