@@ -1,0 +1,32 @@
+.titulo{
+    margin: 0px;
+    padding-top: 20px;
+    background-color: rgb(65, 65, 65, 0.1);
+}
+
+.cardsContainer{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 80%;
+    padding: 50px 0px;
+    margin: 0px auto;
+}
+
+.filters{
+    text-align: center;
+    background-color: rgb(65, 65, 65, 0.1);
+
+}
+
+select {
+    background-color: rgba(78,124,77,1);
+    text-align: center;
+    width: 200px;
+    border-radius: 10px;
+    font-size: large;
+    text-shadow: 0px 1px 5px white;
+    margin: 20px 20px;
+  }

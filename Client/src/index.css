@@ -1,0 +1,10 @@
+body{
+    background-image: url('https://images.alphacoders.com/876/876589.jpg');
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+*{
+    font-family: 'Times New Roman', Times, serif
+}

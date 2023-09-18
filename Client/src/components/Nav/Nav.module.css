@@ -1,0 +1,25 @@
+.fondoNav{
+    background-color: rgb(71, 67, 67);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+}
+
+.botones{
+    background: rgba(78,124,77,1);
+    padding: 5px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: large;
+    margin: 0px 10px;
+    transition: all 1000ms ease;
+}
+
+.botones:hover{
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+}
+

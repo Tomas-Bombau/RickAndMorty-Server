@@ -1,0 +1,74 @@
+.cardContainer{
+    width: 200px;
+    height: auto;
+    background-color: rgb(241, 234, 234);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px white;
+    overflow: hidden;
+}
+
+.cardContainer:hover{
+    transform: scale(1.03)
+}
+
+.cardImage{
+    filter:drop-shadow(0px 16px 10px rgba(78,124,77,1));
+    border: 1px solid black;
+}
+
+.cardContainer > h2{
+    font-size: larger;
+    background: linear-gradient(100deg, rgba(73,71,84,1) 36%, rgba(78,124,77,1) 100%);
+    margin: 0px;
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    flex: auto;
+}
+
+.cardContainer .like{
+    background: rgba(73,71,84,1);
+    border: 0px;
+    margin: 0px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    flex: auto;
+    text-decoration: none;
+}
+
+.like:hover{
+    cursor:pointer;
+}
+
+.nombre{
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+    background-color: rgba(78,124,77,1);
+    box-shadow: inset 0px 0px 20px 1px white;
+    font-size: 25px;
+    opacity: 0;
+    animation: slideInAnimation 4s forwards;
+}
+
+.boton{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+.boton:hover{
+    cursor:pointer;
+    background-color: rgb(218, 208, 118);
+}
+
+@keyframes slideInAnimation {
+    to {
+      opacity: 1;
+    }
+}
