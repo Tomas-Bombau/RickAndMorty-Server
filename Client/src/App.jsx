@@ -20,13 +20,14 @@ function App() {
    const EMAIL = 'tomas.bombau@gmail.com'
    const PASSWORD = '123456'
 
-   const logIn = (userData) => {
-      if (userData.password === PASSWORD && userData.email === EMAIL) {
-         setAccess(true);
-         navigate('/home');
-      } else{
-         alert('El usuario o contraseña son incorrectos')
-      }
+   function login(userData) {
+      const { email, password } = userData;
+      const URL = 'http://localhost:3001/rickandmorty/login/';
+      axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+         const { access } = data;
+         setAccess(data);
+         access && navigate('/home');
+      });
    }
 
    useEffect(() => {
@@ -64,7 +65,7 @@ function App() {
             {location.pathname === '/' ? null : <Nav onSearch={onSearch}/>}
 
             <Routes>
-               <Route path="/" element={<Form logIn={logIn} />}></Route>
+               <Route path="/" element={<Form logIn={login} />}></Route>
                <Route path='/home' element={<Cards characters={characters} onClose={onClose} />} />
                <Route path='/about' element={<About />} />
                <Route path='/detail/:id' element={<Detail />} />

@@ -12,7 +12,7 @@ const Favorites = () => {
 
     const handleOrder = (event) => {
         dispatch(orderCards(event.target.value))
-        setAux(!aux)
+        setAux(!aux) // sino no renderiza
     }
 
     

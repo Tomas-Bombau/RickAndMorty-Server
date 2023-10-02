@@ -45,22 +45,4 @@ const Card = (props) => {
    );
 }
 
-// const mapDispatchToProps = (dispatch) => {
-//    return {
-//       addFav: (character) => {
-//          dispatch(addFav(character))
-//       },
-
-//       removeFav: (id) => {
-//          dispatch(removeFav(id))
-//       }
-//    }
-// }
-
-// const mapStateToProps = (state) => {
-//    return {
-//       myFavorites: state.myFavorites
-//    }
-// }
-
 export default Card
