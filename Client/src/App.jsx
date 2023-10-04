@@ -20,14 +20,25 @@ function App() {
    const EMAIL = 'tomas.bombau@gmail.com'
    const PASSWORD = '123456'
 
-   function login(userData) {
-      const { email, password } = userData;
-      const URL = 'http://localhost:3001/rickandmorty/login/';
-      axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
-         const { access } = data;
+   async function login(userData) {
+      try {
+         const { email, password } = userData
+         const URL = 'http://localhost:3001/rickandmorty/login/'
+         const {data} = await axios(URL + `?email=${email}&password=${password}`)
+         const {access} = data
          setAccess(data);
-         access && navigate('/home');
-      });
+         access && navigate('/home')
+      } catch (error) {
+         console.log(error)
+      }
+
+      // const { email, password } = userData;
+      // const URL = 'http://localhost:3001/rickandmorty/login/';
+      // axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+      //    const { access } = data;
+      //    setAccess(data);
+      //    access && navigate('/home');
+      // });
    }
 
    useEffect(() => {
